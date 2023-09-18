@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>UnityShader</title>
+      <link href="/2023/09/18/UnityShader/"/>
+      <url>/2023/09/18/UnityShader/</url>
+      
+        <content type="html"><![CDATA[<h1>1. Unity的基础光照</h1><h2 id="1-1-基础">1.1 基础</h2><p>光线由光源发出后，会与物体相交：<strong>散射</strong>和吸收。</p><p>着色(<strong>shading</strong>)指的是，根据材质属性（如漫反射属性等）、光源信息（如光源方向、辐照度等），使用一个等式去计算沿某个观察方向的出射度的过程。我们也把这个等式称为光照模型(<strong>Lighting Model</strong>)。</p><h2 id="1-2-标准光照模型">1.2 标准光照模型</h2><p>进入摄像机的光线分为四个部分</p><ul><li>自发光（emissive）</li><li>高光反射（specular）</li><li>漫反射（diffuse）</li><li>环境光（ambient）</li></ul><h3 id="1-2-1-环境光">1.2.1 环境光</h3><p>在标准光照模型中，环境光是一个全局变量。<br>$$<br>c_{ambient} = g_{ambient}<br>$$</p><h3 id="1-2-2-自发光">1.2.2 自发光</h3><p>光线由光源直接进入摄像机，不需要物体的反射。计算时直接使用该材质的自发光颜色。<br>$$<br>c_{emissive} = m_{emissive}<br>$$</p><h3 id="1-2-3-漫反射">1.2.3 漫反射</h3><p>漫反射符合兰伯特定律（Lambert‘s Law）: 反射光线的强度与光源方向的夹角的余弦值成正比。<br>$$<br>c_{diffuse} = (c_{light}.m_{diffuse})max(0,n.I)<br>$$<br>其中，$n$是表面法线，$I$ 是指向光源的单位矢量，$m_{diffuse}$ 是材质的漫反射颜色，$c_{light}$ 是光源颜色。这里法线与光源方向点乘的结果为非负值，防止物体被后面的光源照亮。</p><h3 id="1-2-4-高光反射">1.2.4  高光反射</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Shader </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Shader </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Gitlab使用方法</title>
+      <link href="/2023/09/05/Gitlab%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+      <url>/2023/09/05/Gitlab%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="将Unity项目上传到GitLab涉及一些步骤。下面是一个简单的指南：">将Unity项目上传到GitLab涉及一些步骤。下面是一个简单的指南：</h2><ol><li><p><strong>在GitLab上创建一个项目</strong>：首先，确保你已经在GitLab上创建了一个项目。登录到GitLab，点击&quot;New Project&quot;（新项目），然后按照提示创建一个新项目。选择项目的名称、描述和其他设置。</p></li><li><p><strong>设置Git仓库</strong>：在GitLab项目页面的右上角，你会找到Git仓库的URL。复制这个URL，你将在后续步骤中用到。</p></li><li><p><strong>在Unity中初始化Git仓库</strong>：在Unity中打开你的项目。如果你的项目还没有与Git关联，你需要在项目文件夹中打开终端并运行以下命令来初始化Git仓库：</p><pre><code>bashCopy codegit init</code></pre></li><li><p><strong>添加项目文件</strong>：将你的Unity项目文件添加到Git仓库。你可以使用以下命令将所有文件添加到仓库：</p><pre><code>bashCopy codegit add .</code></pre><p>或者，你可以使用<code>.gitignore</code>文件来排除不需要跟踪的文件，以减小仓库的大小。</p></li><li><p><strong>提交更改</strong>：一旦你添加了文件，使用以下命令提交更改：</p><pre><code>bashCopy codegit commit -m &quot;Initial commit&quot;</code></pre></li><li><p><strong>关联GitLab远程仓库</strong>：将Git仓库关联到GitLab远程仓库，替换<code>&lt;GitLab仓库URL&gt;</code>为你在第2步中复制的URL。</p><pre><code>bashCopy codegit remote add origin &lt;GitLab仓库URL&gt;</code></pre></li><li><p><strong>推送到GitLab</strong>：最后，将你的本地仓库推送到GitLab上。你可能需要提供GitLab账户的凭据。</p><pre><code>bashCopy codegit push -u origin master</code></pre></li><li><p><strong>完成</strong>：一旦推送完成，你的Unity项目就会上传到GitLab仓库中。</p></li></ol><p>请注意，这只是一个基本的指南，具体的步骤可能会因你的项目和工作流程而有所不同。确保在上传项目之前备份好项目文件，并在GitLab上设置适当的访问权限和保护措施，以确保项目的安全性和可维护性。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第十周</title>
+      <link href="/2023/09/04/%E5%91%A8%E6%8A%A5/20230903/"/>
+      <url>/2023/09/04/%E5%91%A8%E6%8A%A5/20230903/</url>
+      
+        <content type="html"><![CDATA[<h2 id="本周计划">本周计划</h2><p>优化单指动画</p><p>方向：</p><pre><code>1. 频率 1. 窄带间隔0.2Hz(分析帧间隔) 2. 降频+相位2. 背景 1. 3. </code></pre><h3 id="优化一、窄带0-2Hz频率间隔">优化一、窄带0.2Hz频率间隔</h3><div style="display: flex;">    <div style="flex: 50%; padding: 5px;">        <img src="0.2Hz间隔.png" alt="0.2Hz间隔" style="width: 100%;">        <p style="text-align: center;">Image 1</p>    </div>    <div style="flex: 50%; padding: 5px;">        <img src="0.2Hz间隔-1693796188271-2.png" alt="0.2Hz间隔-1693796188271-2" style="width: 100%;">        <p style="text-align: center;">Image 2</p>    </div></div><p>首先，由于编码本身限制，在刺激开始的0.1s左右，刺激内容是一致的，因此无法诱发出有效的响应。</p><p>解决方案</p><ol><li>添加相位约束</li><li>刺激图像本身的空间/相位分布不同，可能不需要加</li></ol><h3 id="优化二、画面">优化二、画面</h3><p>运动</p><p>​横向，纵向，旋转</p><h3 id="实验设计">实验设计</h3><p>频率3：0.2：9</p><p><img src="frame_1.jpg" alt="frame_1"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工作周报 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作周报 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown技巧</title>
+      <link href="/2023/08/25/markdown%E6%8A%80%E5%B7%A7/"/>
+      <url>/2023/08/25/markdown%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<h2 id="并列显示图片">并列显示图片</h2><div style="display: flex;">    <div style="flex: 50%; padding: 5px;">        <img src="壁纸2.png" alt="Image 1" style="width: 100%;">        <p style="text-align: center;">Image 1</p>    </div>    <div style="flex: 50%; padding: 5px;">        <img src="壁纸3.png" alt="Image 2" style="width: 100%;">        <p style="text-align: center;">Image 2</p>    </div></div><p>要在Markdown中将两张图像并排显示，你可以使用HTML的<code>&lt;div&gt;</code>元素和CSS样式来实现。以下是一个示例，展示如何在Markdown中并排显示两张图像：</p><pre><code class="language-html">&lt;div style=&quot;display: flex;&quot;&gt;    &lt;div style=&quot;flex: 50%; padding: 5px;&quot;&gt;        &lt;img src=&quot;壁纸2.png&quot; alt=&quot;Image 1&quot; style=&quot;width: 100%;&quot;&gt;        &lt;p style=&quot;text-align: center;&quot;&gt;Image 1&lt;/p&gt;    &lt;/div&gt;    &lt;div style=&quot;flex: 50%; padding: 5px;&quot;&gt;        &lt;img src=&quot;壁纸3.png&quot; alt=&quot;Image 2&quot; style=&quot;width: 100%;&quot;&gt;        &lt;p style=&quot;text-align: center;&quot;&gt;Image 2&lt;/p&gt;    &lt;/div&gt;&lt;/div&gt;</code></pre><p>在这个示例中，我们使用了一个<code>&lt;div&gt;</code>元素作为容器，内部包含两个子<code>&lt;div&gt;</code>元素来放置每张图像。我们使用<code>display: flex;</code>样式属性来使子元素并排显示，并使用<code>flex: 50%;</code>来指定子元素宽度占比。<code>padding</code>属性用于在图像周围添加一些间距。每个子<code>&lt;div&gt;</code>内包含一个图像和一个居中的段落来显示图像的标题。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>梁永安:阅读、游历和爱情</title>
+      <link href="/2023/08/25/%E9%98%85%E8%AF%BB/%E6%A2%81%E6%B0%B8%E5%AE%89-%E9%98%85%E8%AF%BB%E3%80%81%E6%B8%B8%E5%8E%86%E5%92%8C%E7%88%B1%E6%83%85/"/>
+      <url>/2023/08/25/%E9%98%85%E8%AF%BB/%E6%A2%81%E6%B0%B8%E5%AE%89-%E9%98%85%E8%AF%BB%E3%80%81%E6%B8%B8%E5%8E%86%E5%92%8C%E7%88%B1%E6%83%85/</url>
+      
+        <content type="html"><![CDATA[<p>中国青年认识自己的时候，要有这样一个认知：在历史上，人类有游牧民族的属性，又有海洋民族的属性，还有农业民族定居耕作的属性，自己到底是哪一种文明属性？</p><p>今天的年轻人，往往自我分裂。他们的生存方式、劳动方式是农业民族定居式的，要风调雨顺，具有因果逻辑的直接性，延续的是农业民族种瓜得瓜、种豆得豆的传统思维；但现在势态下的我们又有很多游牧民族的特点，需要我们“逐水草而居”，像找工作，大有这个特点；全球化阶段，我们又有海洋民族的特点，必须去探索、开拓，去乘风破浪。</p><p>当代青年需要在这三种文明属性里进行价值重构，可重构什么呢？</p><p>社会面向全球的时候，我们需要海洋文明的精神推动它；坚持做周期性的事情时，要时段，要播种、收获，需要坚持农业文明的开垦性和持久性；而要探寻生活的自由感时，又需要游牧民族特质发挥作用。</p><p>我们今天的麻烦就在这里，自我已经失去了坐标，很难用一元的标准来衡量。今天的人，留给他们思考和沉淀的时间太短，而社会形态又太复杂，自我认知很难建构。在这么复杂的时代，要整合各个维度的东西非常不易，一般要几百年的过程，正是“路漫漫其修远兮”。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 阅读 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>butterfly主题配置之Tagplugins</title>
+      <link href="/2023/08/23/butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B9%8BTagplugins/"/>
+      <url>/2023/08/23/butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E4%B9%8BTagplugins/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>标签外挂是Hexo独有的功能，并不是标准的Markdown格式。</p><p>以下的写法，只适用于Butterfly主题，用在其它主题上不会有效果，甚至可能会报错。使用前请留意</p></blockquote><h2 id="Gallery-相册图库">Gallery 相册图库</h2><p>写法</p><pre><code>&lt;div class=&quot;gallery-group-main&quot;&gt;&#123;% galleryGroup name description link img-url %&#125;&#123;% galleryGroup name description link img-url %&#125;&#123;% galleryGroup name description link img-url %&#125;&lt;/div&gt;</code></pre><ul><li>name：图库名字</li><li>description：图库描述</li><li>link：连接到对应相册的地址</li><li>img-url：图库封面的地址</li></ul><h2 id="Gallery-相册">Gallery 相册</h2><blockquote><p>区别于旧版的Gallery相册,新的 Gallery 相册会自动根据图片长度进行排版，书写也更加方便，与 markdown 格式一样。可根据需要插入到相应的 md。</p></blockquote><pre><code>&#123;% gallery [lazyload],[rowHeight],[limit] %&#125;markdown 图片格式&#123;% endgallery %&#125;</code></pre><ul><li>lazyload【可选】点击按钮加载更多图片，填写 true/false。默认为 false。</li><li>rowHeight【可选】图片显示的高度，如果需要一行显示更多的图片，可设置更小的数字。默认为 220。</li><li>limit【可选】每次加载多少张照片。默认为 10</li></ul><h2 id="tag-hide">tag-hide</h2><blockquote><p>请注意，tag-hide内的标签外挂content内都不建议有h1 - h6 等标题。因为Toc会把隐藏内容标题也显示出来，而且当滚动屏幕时，如果隐藏内容没有显示出来，会导致Toc的滚动出现异常。</p></blockquote><p>如果你想把一些文字、内容隐藏起来，并提供按钮让用户点击显示。可以使用这个标签外挂。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美化 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>视频刺激研究报告电子文档</title>
+      <link href="/2023/08/22/%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/"/>
+      <url>/2023/08/22/%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>完成视频刺激研究</p></blockquote><p><strong>目标</strong></p><p>系统性地研究视频刺激，测试各类相关的刺激参数对于脑电诱发的影响，评估视频刺激的使用规则与适用目标：</p><p><strong>内容</strong>：</p><p>①进行视频刺激的多目标线实验，采集 15 人被试信号，验证视频刺激具有普遍适用性：</p><p>② 优化视频刺激的刺激频率、大小、内容，总结视频刺激的使用规则和最佳配置：</p><p>③ 根据最佳参数设计一套视频刺激的在线编解码系统，采集 10人信号并验证；</p><p>④评估该技术后续开发的可行性。</p><p><strong>交付成果</strong>：</p><p>①视频刺激在线编解码系统 （MATLAB 代码）</p><p>②视频刺激的研究报告电子文档（多目标离线数据结果分析、优化过程、最佳配置与在线结果）</p><h2 id="目录">目录</h2><!-- toc --> <h2 id="1-编码原理">1. 编码原理</h2><h3 id="1-1-电影帧率">1.1 电影帧率</h3><p>电影通常以每秒24帧的速率播放，这被称为标准电影帧率。这一帧率在很大程度上被认为是足够流畅，使人眼中的图像看起来连贯而不卡顿。这与人眼的视觉特性有关。人眼在观看电影或视频时，会出现视觉暂留现象，即眼睛会将连续的静止图像保持在视觉记忆中一小段时间。因此，当画面在24帧的速率下切换时，人眼会对前一帧的图像保持一段时间的感知，然后再转向下一帧。这种暂留效应在某种程度上模糊了帧与帧之间的转换，创造出连贯的视觉体验。</p><h3 id="1-2-动画里的一拍一和一拍二到底是什么">1.2 动画里的一拍一和一拍二到底是什么</h3><p>一拍N简单的说就是一张画在画面上停留几个1/24秒。是动画制作中一种节省工作量的方法，因为每秒八张画(也就是一拍三)，就能<strong>最低限度的动作的连贯</strong>，为了原画师的生命安全，手绘动画很少使用一拍一。</p><h3 id="1-3-电影帧率与显示器帧率不同">1.3 电影帧率与显示器帧率不同</h3><p>电影帧率与显示器帧率不同的情况下，可能会出现一些视觉效果和技术问题。电影通常以24帧/秒的帧率制作，而显示器的刷新率可能是60Hz、120Hz或其他不同的值。这种不匹配可能会导致以下问题：</p><ol><li><strong>画面不流畅</strong>：如果电影以24帧/秒的帧率播放在60Hz的显示器上，可能会出现画面不够流畅的感觉，尤其是在快速移动的场景中。</li><li><strong>画面撕裂</strong>：当电影帧率与显示器刷新率不匹配时，可能会出现画面撕裂，即画面被分成不同的部分，导致视觉上的不连贯。</li><li><strong>快进效应</strong>：如果将24帧/秒的电影播放在120Hz的显示器上，可能会出现“快进”效应，因为每秒显示的帧数比电影的原始帧率多。</li></ol><p>为了解决这些问题，一些技术和方法可以被应用：</p><ol><li><strong>V-Sync 和帧率匹配</strong>：使用V-Sync等技术，将电影的帧率与显示器的刷新率匹配，从而减少画面撕裂和快进效应。</li><li><strong>插帧技术</strong>：某些显示器和设备支持插帧技术，可以将24帧的电影转换成60Hz或120Hz的显示，以提高画面流畅度。</li><li><strong>专用播放器设置</strong>：一些视频播放器软件允许用户调整播放速度或帧率，以使电影适应显示器的刷新率。</li><li><strong>高级显示技术</strong>：一些高级显示技术，如G-Sync和FreeSync，可以根据输入信号的帧率来调整显示器的刷新率，以提供更平滑的播放体验。</li></ol><p>总之，电影帧率与显示器帧率不同可能会导致一些视觉问题，但通过使用合适的技术和设置，可以减少这些问题，以获得更好的观影体验。</p><h3 id="1-4-SSVEP原理">1.4 SSVEP原理</h3><p>SSVEP（Steady-State Visually Evoked Potential）是一种脑电信号，它是由视觉刺激引发的稳态生物电位。在感兴趣的频率范围内，当一个人持续注视一个周期性刺激（如闪烁的光源）时，大脑会产生与刺激频率相对应的电位变化，即SSVEP。这种信号常常被用于脑机接口（BCI）技术，尤其在视觉注意控制方面应用广泛。以下是SSVEP响应特征的一些重要方面：</p><ol><li><strong>频率特定响应</strong>：在SSVEP任务中，响应的最显著特征是在刺激频率及其谐波频率处产生电位增强。例如，如果刺激频率是10 Hz，那么大脑可能会产生10 Hz、20 Hz、30 Hz等频率处的增强响应。这种频率特定响应是SSVEP的核心特征。</li><li><strong>调制深度</strong>：响应的幅度或调制深度与刺激的亮度或对比度有关，通常情况下，刺激越明显，产生的SSVEP响应幅度越大。</li><li><strong>频率选择性</strong>：大脑对不同频率的刺激有不同的响应特点。通常，响应频率越高，SSVEP响应的幅度也越高。这使得较高的频率更容易检测。</li><li><strong>脑区活动</strong>：不同的脑区可能会在不同的频率范围内产生SSVEP响应。脑电极在头皮上的位置可以影响响应的强度和空间分布。</li><li><strong>稳态性</strong>：与其他事件相关电位不同，SSVEP是稳态信号，即它在刺激持续存在时保持稳定。这使得SSVEP在脑机接口应用中具有优势，因为它可以在持续注视刺激的情况下持续提供可用的信号。</li><li><strong>频谱分析</strong>：对脑电信号进行频谱分析可以揭示SSVEP的频率特征。通过识别主要的频率分量，可以确定被试者对特定刺激频率的响应情况。</li></ol><p>总体而言，SSVEP的响应特征包括频率特定性、调制深度、频率选择性、脑区活动和稳态性。这些特征使得SSVEP成为一种广泛用于脑机接口和神经生理学研究的有用工具。</p><h3 id="1-5-RSVP原理">1.5 RSVP原理</h3><p>RSVP（Rapid Serial Visual Presentation）是一种通过高速连续呈现视觉刺激，例如单词或图像，以提高信息处理效率的技术。RSVP的响应特征主要涉及被试者在此过程中产生的脑电信号或行为反应。以下是RSVP的响应特征：</p><ol><li><strong>P300成分</strong>：在RSVP的脑电图（EEG）中，通常可以看到P300成分的存在。P300是一种事件相关电位，表示对于意外、显著或引人注意的刺激的脑电响应。在RSVP中，P300通常在被试者注意到特定刺激时产生，可以用于检测被试者对特定单词或图像的注意。</li><li><strong>N170成分</strong>：N170是一种与人脸或物体识别相关的事件相关电位。在RSVP中，N170成分可能在被试者看到具有特定含义的刺激（例如单词）时出现。它可能与对刺激的分类和识别过程有关。</li><li><strong>注意集中反应</strong>：RSVP中的刺激速度非常快，需要被试者高度集中注意力才能跟上。因此，被试者的注意力水平和注意力分配情况可能在响应中得到体现。注意力过高或分散可能会影响到脑电信号的特点。</li><li><strong>阅读速度和准确性</strong>：RSVP中的呈现速度可以根据被试者的能力进行调整。被试者的阅读速度和准确性可以反映其在RSVP任务中的表现。</li><li><strong>错过率</strong>：在高速呈现的情况下，被试者可能会错过一些刺激。记录错过的刺激数量可以提供一个指标，反映了被试者在RSVP任务中的集中程度和响应能力。</li></ol><p>综上所述，RSVP的响应特征涵盖了脑电信号（如P300、N170等）以及行为表现（注意集中、阅读速度、准确性等）。这些特征可以帮助研究人员理解被试者在高速连续刺激任务中的认知和神经机制。</p><h3 id="1-6-思路">1.6 思路</h3><blockquote><p>以下内容均以60Hz刷新率的显示器为例</p></blockquote><p>考虑使用低帧率的动画作为刺激，比如七帧和八帧两个视频，每帧图片分别呈现$1/7$ 和 $1/8$ 秒。呈现的时间不同，在大脑中激活的响应应该不同。考虑使用任务相关成分分析（TRCA）算法来提取不同的成分。</p><img src="../视频刺激研究报告电子文档/image-20230824130309025.png" alt="image-20230824130309025" style="zoom:50%;" /><h2 id="2-刺激生成">2. 刺激生成</h2><p>首先，为了确保诱发出稳定的响应，使用PsychtoolBox工具箱编写刺激代码。PTB可以精准的控制每一帧的图像刷新。因此，使用PTB设置刷新率为60Hz, 并在60Hz刷新率的基础上通过人为的补帧技术呈现不同帧率的动画。</p><h3 id="2-1-code">2.1 code</h3><pre><code class="language-python">def divide_sequence(start, end, num_parts):    sequence = list(range(start, end+1))    part_size = len(sequence) // num_parts    remainder = len(sequence) % num_parts    parts = []    index = 0    for i in range(num_parts):        size = part_size + 1 if i &lt; remainder else part_size        parts.append(sequence[index:index+size])        index += size    return partsdef gen_code(start, end, num_parts):    # start = 1    # end = 720    # num_parts = 12    result = divide_sequence(start, end, num_parts)    copy_counts = [len(result[i]) for i in range(num_parts)]    # print(copy_counts,len(copy_counts))       result = divide_sequence(start, end, num_parts-1)    sequence = [result[i][0] for i in range(num_parts-1)]    sequence .append(end)    # print(sequence,len(sequence))    result_sequence = []    # 遍历序列和复制次数列表    for num, count in zip(sequence, copy_counts):        result_sequence.extend([num] * count)  # 将当前数复制指定次数并添加到结果序列中    return copy_counts,sequence,result_sequence    </code></pre><h3 id="2-2-生成5s-60Hz的刺激序列">2.2 生成5s 60Hz的刺激序列</h3><pre><code class="language-python">import scipy.io as sioimport matplotlib.pyplot as pltimport numpy as np%run tools.pymy_result_sequence=[]my_copy_counts=[]my_sequence=[]frame_rate=60start = 1t=5n_target=30end = frame_rate * tfor i in range(n_target):       num_parts = 15+i    copy_counts,sequence,result_sequence = gen_code(start, end, num_parts)    # if i==0:    #     plt.figure()    #     plt.plot(result_sequence)    #     plt.title(str(len(copy_counts)/t)+'Hz')    my_result_sequence.append(result_sequence)    my_copy_counts.append(copy_counts)    my_sequence.append(sequence)my_result_sequence = np.array(my_result_sequence)my_copy_counts = np.array(my_copy_counts,dtype=object)my_sequence = np.array(my_sequence,dtype=object)sio.savemat('code.mat',&#123;'my_sequence':my_result_sequence&#125;)</code></pre><h3 id="2-3-编码示例">2.3 编码示例</h3><img src="../视频刺激研究报告电子文档/0.2Hz间隔-1693895144456-1.png" alt="0.2Hz间隔" style="zoom: 25%;" /><h2 id="3-初步分析">3. 初步分析</h2><p>该范式需要分析的内容较多，包括视频内容（人物/风景，动作剧烈/缓慢，响应频率低频/高频，刺激大小）</p><h3 id="3-1-刺激频率">3.1 刺激频率</h3><p>选取了一种视频探究了该范式的大致频率响应范围，3-15Hz</p><h3 id="3-2-刺激大小">3.2 刺激大小</h3><p>对比了边长为100pix,200pix，300pix,400pix，500pix的情况下四分类的准确率。使用无训练算法CCA时，刺激面积越大准确率越高；使用有训练算法TRCA时，10组交叉验证的结果无明显差异，100pix的稍微差些。</p><h3 id="3-3-刺激内容">3.3 刺激内容</h3><p>初步选取了10个不同的电影片段进行四目标分析，刺激频率为6，7，8，9Hz.</p><p>初步结论是 运动诱发的响应最强，如下图所示（人物运动）</p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/data2_5s.gif" alt="data2_5s"></p><p>以及鸟的运动（其中前三秒运动缓慢且目标距离镜头较远无法诱发有效的响应）</p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/data9.gif" alt="data9"></p><h3 id="3-4-手指运动">3.4 手指运动</h3><p>为了使脑机接口的交互更加自然，使用手部的运动代替网格刺激来控制机械手。任务需求： 6目标，分别控制五根手指以及手掌。</p><p>根据需求首先进行了刺激目标的优化，使用Unity3D制作了手部模型以及动画，然后将不同手指的运动以60Hz的帧率保存下来。</p><p>实验分析了单根手指的动作，五指的动作以及不同播放速度的五指和不同视角的手指和加了旋转的手指动作，使用频率进行编码，分别为6.5，7，7.5，8Hz。如下图所示：</p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/image-20230825092814338.png" alt="image-20230825092814338"></p><p>采集了五名被试的数据，结果如下</p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/image-20230825092925135.png" alt="image-20230825092925135"></p><p>结果表明,在使用TDCA解码算法的前提下，1秒以后准确率趋于饱和。</p><p>而1s时的分类结果如下：</p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/image-20230825093056902.png" alt="image-20230825093056902"></p><p><strong>五指的运动准确率普遍高于单指的运动,其中手指1和5最差</strong></p><h3 id="3-5-六目标系统">3.5 六目标系统</h3><p><strong>五指</strong></p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/%E4%BA%94%E6%8C%87.gif" alt="五指"></p><p><strong>单指</strong></p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/%E5%8D%95%E6%8C%87.gif" alt="单指"></p><h4 id="3-5-1-结果分析">3.5.1 结果分析</h4><p>时域</p><p>频域</p><div style="display: flex;">    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/频谱图.png" alt="Image 1" style="width: 100%;">        <p style="text-align: center;">五指</p>    </div>    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/信噪比图.png" alt="Image 2" style="width: 100%;">        <p style="text-align: center;">单指</p>    </div></div>TDCA<div style="display: flex;">    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/平均准确率.png" alt="Image 1" style="width: 100%;">        <p style="text-align: center;">准确率</p>    </div>    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/平均ITR.png" alt="Image 2" style="width: 100%;">        <p style="text-align: center;">ITR</p>    </div></div><p>训练组数</p><div style="display: flex;">    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/不同训练组数的准确率1.png" alt="Image 1" style="width: 100%;">        <p style="text-align: center;">单指</p>    </div>    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/不同训练组数的准确率2.png" alt="Image 2" style="width: 100%;">        <p style="text-align: center;">五指</p>    </div></div><h2 id="4-优化单指动画">4. 优化单指动画</h2><p>方向：</p><pre><code>1. 频率 1. 窄带间隔0.2Hz(分析帧间隔) 2. 降频+相位2. 背景 1. 3. </code></pre><h3 id="4-1-优化一、窄带0-2Hz频率间隔">4.1 优化一、窄带0.2Hz频率间隔</h3><div style="display: flex;">    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/0.2Hz间隔.png" alt="0.2Hz间隔" style="width: 100%;">        <p style="text-align: center;">Image 1</p>    </div>    <div style="flex: 50%; padding: 5px;">        <img src="../视频刺激研究报告电子文档/0.2Hz间隔-1693796188271-2.png" alt="0.2Hz间隔-1693796188271-2" style="width: 100%;">        <p style="text-align: center;">Image 2</p>    </div></div><p>首先，由于编码本身限制，在刺激开始的0.1s左右，刺激内容是一致的，因此无法诱发出有效的响应。</p><p><strong>解决方案</strong></p><ol><li>添加相位约束</li><li>刺激图像本身的空间/相位分布不同，可能不需要加</li></ol><h3 id="4-2-优化二、画面">4.2 优化二、画面</h3><p>运动</p><p>​横向，纵向，旋转</p><h3 id="4-3-实验设计">4.3 实验设计</h3><p><strong>实验目的</strong>：提高单指运动的响应</p><p><strong>频率</strong>：3:0.2:9Hz,共30个目标</p><p><strong>改进</strong>：刺激中添加了光影变化，以及背景运动</p><p><strong>时长</strong>：30（target）* 5(datalength) * 2(对比) * 5（trials）= 25(min)</p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/frame_1.jpg" alt="f1"></p><blockquote><p>last. 一点想法</p></blockquote><ol><li>目前为止采用固定频率的刺激方案，如6.5Hz，相当于可变帧数。 如果改成按固定帧数的方式，比如重复5帧，6帧，7帧，可以尝试一下</li><li>从3Hz的刺激看，有两帧很接近，可能会减弱响应</li></ol><h4 id="结论">结论</h4><p>采集了两名被试，15个频率的数据，进行15分类的结果</p><p><img src="../%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A%E7%94%B5%E5%AD%90%E6%96%87%E6%A1%A3/image-20230913141252525.png" alt="image-20230913141252525"></p><ol><li>0.2Hz响应可以诱发</li><li>加了背景取得了更好的效果，但是亮度变化太大。不符合主观感受预期</li></ol><h3 id="4-4-优化画面">4.4 优化画面</h3><ol><li>白背景（之前的结果）</li><li>黑背景</li><li>影子</li><li>背景运动</li><li>镜子（两只手）</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 动画 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RSVP </tag>
+            
+            <tag> SSVEP </tag>
+            
+            <tag> video </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Affective facilitation of early visual cortex during rapid picture presentation at 6 and 15 Hz</title>
+      <link href="/2023/08/22/%E8%AE%BA%E6%96%87/Affective-facilitation-of-early-visual-cortex-during-rapid-picture-presentation-at-6-and-15-Hz/"/>
+      <url>/2023/08/22/%E8%AE%BA%E6%96%87/Affective-facilitation-of-early-visual-cortex-during-rapid-picture-presentation-at-6-and-15-Hz/</url>
+      
+        <content type="html"><![CDATA[<p><img src="../Affective-facilitation-of-early-visual-cortex-during-rapid-picture-presentation-at-6-and-15-Hz/image-20230822090714422.png" alt="image-20230822090714422"></p><p><strong>摘要</strong>：稳态视觉诱发电位（SSVEP）是注意力资源分配的神经生理标记，其发生器位于早期视觉皮层，与中性复杂图像相比，情绪复杂图像的稳态视觉诱发电位振幅更大。复杂图像的情绪线索提取与 N1-EPN 复合体有关，其峰值潜伏期为 140-160 毫秒。我们测试了早期视觉皮层对情感性图片的神经促进是否需要单个图片的情感线索提取，即使是在呈现相同价值类别的图片流时也是如此。图片以 6 Hz（167 毫秒，允许提取）或 15 Hz（每幅图片 67 毫秒，导致后续图片处理中断）的频率显示。结果显示，与中性图像相比，情绪图像在 6 Hz 频率下的 SSVEP 振幅增强，但在 15 Hz 频率下没有差异。这并不是由于两种情绪类别之间的特征差异造成的。研究结果有力地表明，单个图像需要显示足够长的时间，以便情感线索提取能够驱动早期视觉皮层的情感神经调节。</p><p>SSVEP 是对与驱动刺激具有相同时间频率的闪烁刺激的连续振荡反应（Regan，1989 年），其主要发生器位于包括初级视觉皮层在内的早期视觉区域（M ̈ uller 等人，2006 年；Di Russo 等人，2007 年）</p><p>SSVEP 的振幅不仅在受试者选择性地注意某个位置或刺激时会得到可靠的增强（Morgan，1996 年；Andersen 等人，2009 年），而且在观看情绪图片而非自然图片时也会得到增强（Keil 等人，2005 年；2008 年）。因此，SSVEPs 是一种强大的工具，可用于追踪长时间内对刺激物的注意资源分配情况。</p><p>在研究情绪价值如何调节 SSVEP 振幅的典型研究中，参与者观看的是单张图片，这些图片通常取自国际情感图片系统（IAPS；Lang 等人，2005 年），以 10 Hz 左右的频率闪烁数秒（Keil 等人，2003 年；Keil 等人，2009 年）。这些图像通常描绘的是情绪愉快的场景（如情侣、婴儿）、不愉快的场景（如残缺的尸体、攻击场景）或中性场景（日常事件的图片）。如前所述，单张图片的情感内容可在刺激开始后 140 毫秒内迅速提取出来。然而，目前还不清楚 SSVEP 振幅调节是由每个呈现周期重复提取情绪内容驱动的，还是由整个试验中情绪图片价值的整合驱动的。</p><p>研究这个问题的一种方法是，在快速序列视觉呈现（RSVP）中，以不同的速率为每个周期呈现不同的图像。与遮蔽类似，RSVP 可以研究神经对处理资源的竞争（Keysers 和 Perrett，2002 年）。每个周期呈现不同图像的结果是，每幅图像对后续图像起到前向遮蔽作用，对前一幅图像起到后向遮蔽作用。事实证明，即使在感知要求较高的 RSVP 条件下，情绪唤醒图片也会 &quot;偏向 &quot;神经表征竞争，增强神经对情感刺激的反应（Jungho ̈ fer 等人，2001 年；Smith 等人，2006 年；Flaisch 等人，2008 年；Peyk 等人，2009 年）。例如，快速变化的情绪图像和中性图像序列可以在 EPN 中反映出情感辨别。这在每幅图像显示时间为 335 毫秒（Flaisch 等人，2008 年）或甚至 142 毫秒（Smith 等人，2006 年）的 RSVP 中得到了证明，而这正是 N1-EPN 复合物的时间范围。此外，在以 &quot;不愉快-中性 &quot;图像对交替呈现的图片中，区分不愉快和中性内容的能力被证明可以维持到 12 Hz（83 毫秒）的呈现率（Peyk 等人，2009 年）。有趣的是，该呈现时间是此类交替序列可观察到的 EPN 的上限。作者认为，图片序列（情感-中性）的消极和积极 EPN 成分的强烈叠加最终导致频率高于 12 Hz 的破坏性干扰效应。</p><p>最近，Alonso-Prieto 等人（2013 年）以不同的频率呈现 RSVP，每个周期呈现不同的中性面孔或在整个试验过程中呈现相同的面孔。这两种条件下的 SSVEP 振幅差异最大的频率是 6Hz（即每个周期 170 毫秒），而在高于 10 Hz 的频率下，两种条件下的 SSVEP 振幅没有差异。有趣的是，6 Hz 周期与 N170 分量的潜伏期相匹配，而 N170 分量是人脸辨别的神经标记（Bentin 等人，1996 年；Bentin 和 Deouell，2000 年；Rossion 和 Jacques，2008 年）。与 Peyk 等人（2009 年）类似，Alonso-Prieto 等人（2013 年）也认为，在较高的呈现率（&gt;10 Hz）下，对单个人脸的精细处理可能会被后续人脸的呈现所干扰。</p><p>上述研究结果提出了以下问题： 情绪复杂图像对早期视觉皮层活动的神经促进作用是否需要允许提取每幅图像情绪线索的呈现率？如果是这样的话，SSVEP 振幅只有在 RSVP 率允许提取每幅图像的情绪线索时（N1-EPN 复合潜伏期附近）才会作为情绪的函数受到调节。因此，正如前面提到的一些研究表明的那样，当后面的图像扰乱了前面图像的处理过程时，SSVEP 的振幅就不会发生调节。但是，如果在整个刺激过程中，快速呈现的同一情绪类别的不同图像被整合为 &quot;情绪性 &quot;或 “中性”，那么较短的呈现时间就足以驱动不同的 SSVEP 振幅效应。此外，我们还旨在探索 SSVEP 振幅是否会对快速图片流中情绪内容的快速转换（从不悦到中性，反之亦然）产生敏感反应。在这里，我们引入了情绪内容变化的试验，即从中性到情绪变化或反之。通过这些试验，我们可以推断出 SSVEP 的振幅调制会随着情绪内容的提取而发生变化，这也支持了 6 赫兹或 15 赫兹 RSVP 的预期振幅差异（或振幅不变），分别只与情绪或中性图像有关。</p><p><img src="../Affective-facilitation-of-early-visual-cortex-during-rapid-picture-presentation-at-6-and-15-Hz/image-20230822103816693.png" alt="image-20230822103816693"></p><p>本文通过三个实验证明</p><p><strong>实验一：RSVP with 15 Hz</strong>  包括自然图像，情绪图像以及切换</p><p><img src="../Affective-facilitation-of-early-visual-cortex-during-rapid-picture-presentation-at-6-and-15-Hz/image-20230822095911193.png" alt="image-20230822095911193"></p><p><strong>结果</strong>：在 RSVP 数据流中呈现一幅不同的图像，时间短至 67 毫秒，并不会调节 SSVEP 的振幅作为情绪情感的函数。与中性图像相比，呈现同一情绪类别的单个图像，即使长达 4 秒钟，也不会促进早期视觉皮层对情绪图像的神经活动。每张图片的呈现时间如此之短，可能导致了破坏性的掩蔽效应，干扰了对前一张图片的情绪线索提取。在实验 2 中，呈现率增加到 167 毫秒（即 6 赫兹）。鉴于 N1-EPN 复合物的起始潜伏期（在 140 至 160 毫秒之间达到峰值），6 赫兹的 RSVP 不应导致下一幅图像对情绪线索提取的显著干扰，因此预计 SSVEP 的振幅将作为情绪价位的函数而受到调节。</p><p><strong>实验二：RSVP with 6 Hz</strong></p><p><img src="../Affective-facilitation-of-early-visual-cortex-during-rapid-picture-presentation-at-6-and-15-Hz/image-20230822100112634.png" alt="image-20230822100112634"></p><p>结果：在我们的期望中，167 毫秒的时间增加了 SSVEP 的调制功能。源定位显示了两个重要结果：与 6 Hz RSVP 率相比，15 Hz RSVP 率激活的大脑皮层区域没有明显差异，而情绪图像的更大激活基本上发生在这些区域，表明早期视觉皮层的感觉增益。然而，一个可能的混淆因素是，相对于中性的 IAPS 图像，不愉快的图像往往具有特别突出的特征构成（如残缺尸体的红色血迹、物体的暗色形状等）。这些特征可能使不愉快的图像 salient，因此，吸引了更多的关注。尽管这种替代解释似乎不太可能，但由于实验 1 中也存在这些低级差异，因此在实验 3 中，我们额外呈现了相应图像的相位乱码版本，其中任何与内容相关的信息都被扭曲，但**低级物理参数（亮度、对比度、空间频率、颜色）**却得以保留（见方法和图 1C、D）。如果情绪性图像和中性图像在低级特征构成上的任何差异对实验 2 中观察到的情绪性 SSVEP 振幅调节起了重要作用，那么我们预计乱码图像也会产生类似的 SSVEP 效果。</p><p><strong>实验三: RSVP with scrambled and intact pictures at 6 Hz</strong></p><p><img src="../Affective-facilitation-of-early-visual-cortex-during-rapid-picture-presentation-at-6-and-15-Hz/image-20230822103241473.png" alt="image-20230822103241473"></p><p><strong>结果</strong>：我们重复了实验 2 的主要发现：对于完整的图像，SSVEP 振幅受情绪调节。重要的是，我们发现与不愉快的图片流相比，中性图片的乱码版本的 SSVEP 振幅没有差异。实验结果有力地表明，<strong>早期视觉皮层对不愉快图像的神经促进作用并不是由图像的低级特征组成（如颜色、空间频率）驱动的。</strong></p><p><strong>总结</strong></p><p>在三个系列实验中，我们通过以 6 或 15 Hz 频率呈现复杂的中性或不愉快图像作为 RSVP 流，研究了 SSVEP 振幅调制与情绪情感的关系。之前的研究表明，SSVEP 振幅增强与早期视觉皮层的神经促进或感觉增益有关（Mu ̈ ller 等人，1998 年 a、b）（Mu ̈ ller 和 Hillyard，2000 年；Andersen 等人，2008 年）。我们发现，在 6 Hz（每幅图像 167 毫秒）频率下，与中性 RSVP 流相比，不愉快的 RSVP 流的 SSVEP 振幅会增强。与此相反，我们在 15 Hz 时没有发现这种效应，这表明 SSVEP效应的产生需要足够的时间来提取每幅图像的情绪内容。我们还研究了几种可能的混淆因素，如低级图像特性以及 6 赫兹和 15 赫兹 SSVEPs 的皮层生成器的差异。我们发现，这些干扰因素不太可能影响我们的结果。知觉遮蔽可能会打断提取图像情感内容的处理阶段（140-160 毫秒，N1-EPN 复合物潜伏期），最有可能解释 15 赫兹 SSVEP 情感调节缺失的原因（Keysers 和 Perrett，2002 年）。虽然同一情绪类别的图像呈现了几秒钟，但显然这些信息并没有整合在一起，似乎需要一定的呈现时间来提取情绪线索。与我们的研究结果一致，Codispoti 等人（2009 年）的研究表明，对于显示时间小于 80 毫秒并紧接着视觉遮罩的情绪图片，皮肤传导或 ERP 反应几乎没有可靠的情感调节。</p><p>相反，6 Hz 的频率可能足以识别每张图片的情感内容。解释 SSVEP 振幅效应的一种方法可能是，早期视觉皮层的神经促进作用依赖于来自高级皮层区域的再入机制（Keil 等人，2009 年）。因此，这可能是我们的研究结果的一种解释。信息的第一次前馈扫描（Lamme 和 Roelfsema，2000 年）必须到达与情绪线索提取相关的皮层区域。此前，对于复杂图像，我们在枕颞区和顶叶区发现了 EPN 的来源（Scho ̈ nwald 和 M ̈ uller，2014 年）。重要的是，来自这些高阶结构的反馈或再入射被证明可以调节视觉皮层的活动（Keil 等人，2009 年），因此，与中性图像相比，闪烁的情绪图像会导致 SSVEP 振幅增强。在情绪变化持续 350400 毫秒的试验中，振幅变化相对较慢，这也支持了这种较长的处理循环。Jungho ̈ fer 等人（2001 年）认为，150-200 毫秒的 RSVP 呈现时间足以使再入射投射到视觉皮层。在一项后续的 fMRI 研究中，这些作者报告说，与中性的 IAPS 图像相比，在 6 Hz 频率下呈现的情感性 IAPS 图像会增加顶叶内侧、颞叶下侧和枕叶外侧区域的活动（Jungho ̈ fer 等人，2006 年）。这种激活模式与上文提出的激活环路十分吻合。</p><p>如前所述，我们还调查了一些可能的混淆因素。首先，情绪效应并非由低级图像特征（如颜色、空间频率）驱动。如果刺激的情感是由这些低层次的图像特征传达的，而不涉及整体的图像主题，那么在相位乱码图像中也会观察到 SSVEP 情感调节。相反，扭曲的不愉快和中性图像的呈现并没有对 SSVEP 产生任何影响。另一种可能是，在 15 赫兹 RSVP 中，&quot;无效应 &quot;是由于习惯化造成的，因为在整个实验过程中，单张图片在这里呈现了 120 次，而在 6 赫兹 RSVP 中只呈现了 64 次。为了控制这种情况，我们计算了在有变化的试验中 15 Hz 流的 SSVEP 振幅的一半，并通过重复测量方差分析对其进行了检验，该方差分析包含了受试内因子 情绪内容（不愉快/中性）和一半（第一次/第二次）。我们发现实验的前半部分和后半部分之间没有差异（所有 Fs 均小于 1）。最后，15 Hz 和 6 Hz SSVEPs 的皮层发生器都位于早期视觉皮层，因此不太可能解释不同研究中观察到的不同 SSVEP 效应。如图 7B 所示，情绪激动</p><p>然而，<strong>目前的实验只包括不愉快的 IAPS 图像，因此我们无法将我们的发现推广到所有情绪图像</strong>。因此，在今后的研究中，我们应该将实验设计扩展到令人愉快的 IAPS 图像，以便对令人不愉快和令人愉快的图像进行直接比较。在我们之前的一项研究中，我们发现在分散注意力的范式中，令人愉快和令人不愉快的 IAPS 图像之间没有差异，因此我们预计在这里也不会出现统计学上的显著差异（Hindi Attar 等人，2010 年）。总之，我们的研究结果与其他一些研究结果一致，支持这样一种观点，即情绪图片的呈现持续时间对于早期视觉皮层活动的神经促进作用至关重要，这种神经促进作用导致情绪图片的 SSVEP 振幅增加，而中性图片的呈现频率为 6 Hz（即每幅图片 167 毫秒）。如果与内容提取相关的区域的再入射在早期视觉皮层激活中起着重要作用，那么对于复杂图像，所需的关键时间定义了 N1-EPN 复合物的潜伏期。新图像中断了内容提取，即使该图像属于同一情绪类别，似乎也会扰乱个体的内容提取。我们的研究结果清楚地表明，要驱动早期视觉区域的 SSVEP 情感调节，似乎需要对每幅图像进行情感线索提取，而不是情感价值的整合过程。因此，我们的研究结果进一步揭示了情感刺激处理的速度，并强调了 SSVEP 是研究情感刺激感知过程中视觉皮层活动变化的有力工具。</p><p><strong>名词</strong></p><ul><li>EPN: “Early Posterior Negativity (EPN)” 的中文翻译是“早期后脑负性”或“早期后脑负波”。这是一种神经生理事件，出现在人脑对特定视觉刺激做出反应时，尤其是那些具有情绪或注意力重要性的刺激。它是一种事件相关电位（ERP），是大脑对特定感官、认知或运动事件的可测电反应。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RSVP </tag>
+            
+            <tag> SSVEP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>对自然多模态情感视频的皮层电反应</title>
+      <link href="/2023/08/21/%E8%AE%BA%E6%96%87/%E5%AF%B9%E8%87%AA%E7%84%B6%E5%A4%9A%E6%A8%A1%E6%80%81%E6%83%85%E6%84%9F%E8%A7%86%E9%A2%91%E7%9A%84%E7%9A%AE%E5%B1%82%E7%94%B5%E5%8F%8D%E5%BA%94/"/>
+      <url>/2023/08/21/%E8%AE%BA%E6%96%87/%E5%AF%B9%E8%87%AA%E7%84%B6%E5%A4%9A%E6%A8%A1%E6%80%81%E6%83%85%E6%84%9F%E8%A7%86%E9%A2%91%E7%9A%84%E7%9A%AE%E5%B1%82%E7%94%B5%E5%8F%8D%E5%BA%94/</url>
+      
+        <content type="html"><![CDATA[<p><img src="image-20230822130501261.png" alt="image-20230822130501261"></p><p><strong>摘要</strong>：以往的研究已经探究了情绪视频对外周生理测量和意识体验的影响，而本研究则将研究扩展到了大脑皮层测量，特别是稳态视觉诱发电位（ssVEP）。研究人员精心策划了 45 段视频，这些视频代表了广泛的情感和中性内容，并以闪烁的边框呈现。<strong>这些视频采用连续的单镜头视角、自然的背景音乐，并排除了与专业电影相关的元素，以增强真实感</strong>。研究结果表明，在观看情感视频时，ssVEP 振幅会持续降低，这与短片的情感强度评级密切相关。这表明叙事视听刺激有可能追踪大脑皮层的动态情绪处理，为情感神经科学的研究提供了新的途径。研究结果凸显了使用逼真的视频刺激来研究人脑如何在一个提高生态有效性的范式中处理情绪事件的潜力。未来的研究可以通过扩大视频集、针对特定皮层网络和操纵叙事可预测性来进一步发展这一范式。总之，这项研究为使用逼真的视频刺激来研究情绪感知奠定了基础，并有可能拓展我们对现实世界中人脑情绪处理的理解。</p><p><strong>多模态视频的复杂性使其成为一种难以控制的实验刺激，尤其是对皮层电测量而言。</strong></p><p>据我们所知，只有两项研究在记录脑电图时使用了视频刺激来诱发情绪状态，这两项研究都评估了阿尔法波段功率的变化。其中一项研究报告称，恐惧、悲伤或中性视频内容对额叶α功率没有不同的影响（Dennis 和 Solomon，2010 年），另一项研究同时使用了视频和场景（Simons 等人，2003 年），并报告称，与中性视频相比，在唤醒过程中顶叶α功率出现了可靠的下降。对情绪视频感知的脑电图研究很少的一个可能原因仅仅是方法上的，因为没有单一的刺激事件可以对事件相关电位（ERP）进行平均，而ERP是分析皮层电活动最常用的方法。</p><p>与静态场景相比，多模态视频片段在记录脑电图（EEG）时，在实验控制方面存在一些问题。为了解释不同视频内容在皮层电反应性上的潜在差异，视频集在基本感觉和知觉特征上不应有系统性差异，同时保留促进真实感的因素（Allison, Wilcox, &amp; Kazimi, 2013; Lin &amp; Peng, 2015）。这些因素包括连续的单镜头、将观众置于地面位置的景观视角、没有音乐或旁白的环境音轨，以及没有专业创作痕迹的视频质量，以增强短片代表真实事件的印象。选择 10 秒钟的相对较短的持续时间，是为了提供足够短的时间，以便从不同的情感内容类别中选择多个示例，但又要有足够长的时间来吸引和维持情感状态，以便记录大脑皮层的反应。</p><p><strong>视频刺激集</strong> . 制作这组视频的目的是在保持视频基本感知特征合理不变的情况下，表现各种不同的情感和中性内容。视频的时长被剪辑为 10 秒，目的是让观众能够快速识别情境的性质，并在整个时间间隔内保持叙事性。视频采用单镜头视角，使观众大致与视线平齐，并配有自然的背景音乐。视频中没有可识别的演员，也没有与专业电影相关的高制作价值元素（如专业灯光、构图）。这样做的目的是尽量减少人为因素，以免破坏观众对片段所描述真实事件的信念。在选择视频时，情感视频和中性视频的响度和动作程度大致相同，以避免情感和动作的混淆。</p><p>我们从互联网上收集了 45 个符合上述标准的短片，这些短片描述了一系列令人愉快、中性和不愉快的情况。这些视频被分为 5 组，每组 9 个视频。其中四类视频描述的是情绪化的情境，实验人员判断这些情境具有高度唤醒性（过山车、热恋情侣、生动的外科手术、直接威胁）或适度唤醒性（小狗、可爱的婴儿；间接威胁）。其中一组 9 段视频描述的是活跃而普通的生活经历（走在繁忙的街道上、厨房里辛勤工作的员工）。这些视频片段的一些基本感知质量被量化。其中包括声音强度，使用 BAFX 3370 数字声级计测量，声级计放置在视频片段的左侧。音频由戴尔 A5253 扬声器系统提供，该系统带有低音炮，直接置于视频监视器下方，响度以每秒记录两次的分贝（A 加权）值进行评估，并对每段视频取平均值。亮度是通过将彩色视频转换成灰度，并对每个视频帧的 0-255 值取平均值来确定的。使用 Magick R 软件包 2.7.3 版（Ooms，2021 年），<strong>将视频中描述的运动量化为每个视频连续帧之间灰度像素值的平均差异</strong>。例如，在视频的高运动量期间，许多像素在帧与帧之间的亮度变化会很大。对这些变化进行平均，得出代表每段视频中总运动量的分数。最后，<strong>香农熵（Shannon’s entropy）被用作感知复杂性的指标，通过量化每帧中的熵值来提供每段 10 秒视频的平均值和标准偏差</strong>。这些量化的视频特征将与我们从参与者样本中收集到的皮层电数据以及愉快度和唤醒度的情绪评分相关联。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SSVEP </tag>
+            
+            <tag> video </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试图片</title>
+      <link href="/2023/08/21/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/"/>
+      <url>/2023/08/21/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87/</url>
+      
+        <content type="html"><![CDATA[<p><img src="%E5%A3%81%E7%BA%B85.png" alt="壁纸5"></p><p>由于未知的原因，图片在网页上不显示，用F12查看后，发现图片路径不正常。多了文件夹的名字。</p><p>目前修改如下，暂时先用着</p><ol><li>typora设置-图像设置，将图片存放在文件名相同的一个文件夹里</li></ol><p><img src="image-20230821113948941.png" alt="image-20230821113948941"></p><ol start="2"><li><p>修改typora 的图片根路径</p><p>在yaml中添加： typora-root-url: 测试图片</p><p><a href="http://xn--post-p85f474butsojguzet5h.md">或在模板文件post.md</a> 中添加 typora-root-url: 测试图片，以便于自动设置</p><p>这样修改后再typora中编辑时，可以显示图片。但是网页中还是无法正常显示</p><p>查看后发现路径中多了 ‘/’</p></li><li><p>使用typora 的替换工具，将 ‘/’ 替换为 ’ '，然后运行hexo g 和 hexo s 即可正常显示</p></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>视频实验进展</title>
+      <link href="/2023/07/21/%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E8%BF%9B%E5%B1%95/"/>
+      <url>/2023/07/21/%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E8%BF%9B%E5%B1%95/</url>
+      
+        <content type="html"><![CDATA[<h2 id="20230721">20230721</h2><p>%dplayer “url=视频实验进展/序列 01.mp4” %</p><p><img src="%E8%A7%86%E9%A2%91%E5%AE%9E%E9%AA%8C%E8%BF%9B%E5%B1%95/8a7880b9b32d916c1120ed6cad98b18.png" alt=""></p><h3 id="假设：-刺激是由于不同帧之间的亮度变化产生的，且亮度均匀变化。">假设： 刺激是由于不同帧之间的亮度变化产生的，且亮度均匀变化。</h3><h3 id="假设：-刺激与颜色关系少，与亮度有关">假设： 刺激与颜色关系少，与亮度有关</h3><h2 id="下一步计划">下一步计划</h2><ol><li><p>单目标或少目标实验。采较长的数据长度（5s），对比颜色，亮度</p></li><li></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>视频编码文献</title>
+      <link href="/2023/07/21/%E8%AE%BA%E6%96%87/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E6%96%87%E7%8C%AE/"/>
+      <url>/2023/07/21/%E8%AE%BA%E6%96%87/%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E6%96%87%E7%8C%AE/</url>
+      
+        <content type="html"><![CDATA[<h1>2020</h1><h3 id="文章">文章</h3><p><img src="image-20230721124752089.png" alt="image-20230721124752089"></p><h3 id="原理：">原理：</h3><p>刺激包括帧频与步频，主要响应为帧频。</p><p><img src="image-20230721124832956.png" alt="image-20230721124832956"></p><h3 id="实验设计：对比了闪烁，棋盘格SSMVEP和步态运动">实验设计：对比了<strong>闪烁</strong>，<strong>棋盘格SSMVEP</strong>和<strong>步态运动</strong></h3><p>每帧刺激重复7 5 6 4次。响应频率为8.57 12 10 15Hz.步频为0.526 0.75 0.625 0.938Hz</p><p><img src="image-20230721124852135.png" alt="image-20230721124852135"></p><h3 id="结果">结果</h3><p>结果中有2f的差频</p><p><img src="image-20230721130003861.png" alt="image-20230721130003861"></p><p>CCA分类</p><p><img src="image-20230721125009409.png" alt="image-20230721125009409"></p><h1>2021</h1><h3 id="文章-2">文章</h3><p><img src="image-20230721125143111.png" alt="image-20230721125143111"></p><p>实验一样，用有训练算法进行分类，提出了基于TRCA的CB-mc-TRCA算法</p><p><img src="image-20230721125324628.png" alt="image-20230721125324628"></p><h3 id="结果-2">结果</h3><p><img src="image-20230721125302753.png" alt="image-20230721125302753"></p><hr><h3 id="文章-3">文章</h3><p><img src="image-20230721132206500.png" alt="image-20230721132206500"></p><h3 id="刺激生成方法">刺激生成方法</h3><p>M : 呈现的图片数</p><p>N : 每张图片重复次数，呈现N/60s</p><p>运动频率： 60/（M*N）</p><p>帧频：60/N</p><p><img src="image-20230721132515641.png" alt="image-20230721132515641"></p><h3 id="离线实验">离线实验</h3><p>探究不同帧率的响应。帧率变化为4-15Hz(4Hz, 4.29Hz, 4.62Hz, 5Hz, 5.45Hz, 6Hz, 6.67Hz, 7.5Hz, 8.57Hz, 10Hz, 12Hz and 15Hz, i.e. N = 15, 14,…, 4) ，其中N为重复的帧数。</p><h3 id="离线结果">离线结果</h3><p>诱发的响应在低频部分响应较高</p><p><img src="image-20230721133946457.png" alt="image-20230721133946457"></p><h3 id="实验流程">实验流程</h3><p><img src="image-20230721132806509.png" alt="image-20230721132806509"></p><h3 id="实验演示">实验演示</h3><p>刺激频率  6Hz, 5Hz, 4.28Hz and 5.45Hz</p><p><video src="视频编码文献/媒体1.mp4"></video></p><h3 id="在线结果">在线结果</h3><p>分类方法： 第一个block用CCA,其余的用TRCA</p><p><img src="image-20230721135129754.png" alt="image-20230721135129754"></p><h1>2022</h1><h3 id="文章-4">文章</h3><p><img src="image-20230721130145437.png" alt="image-20230721130145437"></p><p>文章分析了视觉BCI中使用的瞬态脑电图（EEG）反应，即视觉诱发电位（VEP）/运动起始VEP（mVEP）和稳态反应（SSVEP/SSMVEP）在年轻组（年龄在22至30岁之间）和老年组（年龄在60至75岁之间）之间与年龄相关的差异。</p><p>视觉刺激包括<strong>闪烁</strong>、<strong>运动棋盘</strong>和动作观察（AO），均设计为<strong>周期性频率</strong>。AO刺激是利用一些手部动作（包括<strong>抓握、外翻、拇指捏</strong>）的视频来生成的。18 名老人和 18 名学生参加了实验。实验采用了三种脑电图算法，即典型相关分析 (CCA)、任务相关成分分析 (TRCA) 和extended-CCA。</p><p>与年轻受试者相比，<strong>老年人组在运动开始时引起的 P1 振幅明显更高</strong>，这可能是老年人使用基于 mVEP 的 BCIs 的潜在优势。这项研究还首次表明，基于 AO 的 BCI 对老年人群是可行的。不过，还需要针对老年受试者的新算法，尤其是在识别 AO 目标方面。</p><h3 id="刺激范式">刺激范式</h3><p>闪烁，棋盘运动，拇指捏</p><p><img src="fnagi-14-1004188-g001.jpg" alt="img"></p><h2 id="实验流程-2">实验流程</h2><p>刺激频率 6, 5, 4.615, and 6.667 Hz. For the AO stimulus, the frequencies of the action movement were 0.6, 0.83, 0.58, and 1.11 Hz, respectively (<em>M_AO</em> = 10, 6, 8, and 6, respectively).</p><p><img src="fnagi-14-1004188-g002.jpg" alt="img"></p><h3 id="实验结果">实验结果</h3><img src="fnagi-14-1004188-g005.jpg" alt="img" style="zoom:50%;" /><h3 id="分类结果">分类结果</h3><img src="fnagi-14-1004188-g006.jpg" alt="img" style="zoom:50%;" /><h2 id="总结">总结</h2><ol><li>频率生成基于刷新相同的图片数，没有使用类似采样正弦的操作来生成更多的帧频</li><li>没有研究产生响应的动作本身。就是真正起作用的部分是什么</li><li>从RSVP的角度出发，不需要一个完整的动作，只需要帧数不同。</li><li>强调的是帧频与动作频率，但是动作频率很弱，可以不用考虑。</li><li></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>利用闪烁视频刺激诱发的ssVEPs 研究情境威胁下的持续注意力</title>
+      <link href="/2023/07/18/%E8%AE%BA%E6%96%87/%E5%88%A9%E7%94%A8%E9%97%AA%E7%83%81%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E8%AF%B1%E5%8F%91%E7%9A%84ssVEPs%20%E7%A0%94%E7%A9%B6%E6%83%85%E5%A2%83%E5%A8%81%E8%83%81%E4%B8%8B%E7%9A%84%E6%8C%81%E7%BB%AD%E6%B3%A8%E6%84%8F%E5%8A%9B/"/>
+      <url>/2023/07/18/%E8%AE%BA%E6%96%87/%E5%88%A9%E7%94%A8%E9%97%AA%E7%83%81%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E8%AF%B1%E5%8F%91%E7%9A%84ssVEPs%20%E7%A0%94%E7%A9%B6%E6%83%85%E5%A2%83%E5%A8%81%E8%83%81%E4%B8%8B%E7%9A%84%E6%8C%81%E7%BB%AD%E6%B3%A8%E6%84%8F%E5%8A%9B/</url>
+      
+        <content type="html"><![CDATA[<p><img src="image-20230821140736830-1692598060772-1.png" alt="image-20230821140736830"></p><p>本研究的两个主要目标是：（1）使用视频刺激成功诱导ssVEPs；（2）研究在差异情境条件诱导的潜在威胁情境中视觉皮层反应的变化。 在这里，我们测试了一个假设，即与安全情境相比，厌恶情境条件反射是否会促使视觉皮层对威胁情境做出更强的反应，并通过ssVEPs进行测量。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> video, SSVEP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>青光眼检测</title>
+      <link href="/2023/07/18/%E8%AE%BA%E6%96%87/%E9%9D%92%E5%85%89%E7%9C%BC%E6%A3%80%E6%B5%8B/"/>
+      <url>/2023/07/18/%E8%AE%BA%E6%96%87/%E9%9D%92%E5%85%89%E7%9C%BC%E6%A3%80%E6%B5%8B/</url>
+      
+        <content type="html"><![CDATA[<p><strong>参考文献</strong></p><p>[1] M. Nakanishi等, 《Detecting Glaucoma With a Portable Brain-Computer Interface for Objective Assessment of Visual Function Loss》, <em>JAMA Ophthalmol</em>, 卷 135, 期 6, 页 550, 6月 2017, doi: <a href="https://doi.org/10.1001/jamaophthalmol.2017.0738">10.1001/jamaophthalmol.2017.0738</a>.</p><h2 id="引言">引言</h2><p><strong>目的</strong>：对青光眼等疾病的视野缺损评估，使用便携式脑机接口（BCI）的开发和初步验证。</p><p>Glaucoma was diagnosed based on a masked grading of optic disc stereophotographs.</p><pre><code>青光眼的诊断依据通常包括以下方面：1. 视力检查：医生会测试患者的视力，包括远视力和近视力。2. 压力测量：通过进行眼压检查（眼压计或非接触式眼压计），医生可以测量眼压是否升高。高眼压是青光眼的常见特征。3. 验光检查：医生使用验光表评估患者的眼睛，并检查任何可能的近视或远视问题。4. 视野检查：通过进行视野测试，医生可以评估患者的视野范围是否受到青光眼的影响。青光眼会逐渐损害视野边缘，使其缩小。5. 青光眼病史：医生会询问患者有关家族青光眼史、个人健康状况和任何可能的症状。6. 眼底检查：通过检查眼底，医生可以评估视神经盘和视网膜的健康状况。青光眼通常伴随着视盘损害和视网膜血管变化。</code></pre><p><code> </code></p><p>使用BCI设备和标准自动验光仪（SAP）同时检测，结果无统计学差异；</p><table><thead><tr><th></th><th>SAP的缺点</th><th>BCI缺点（mfVEP）</th></tr></thead><tbody><tr><td>1</td><td>病人主观差异</td><td>导电膏（耗时与不舒适）</td></tr><tr><td>2</td><td>不便携</td><td>不便携</td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p>然而， SSVEP 技术（无线，干电极）的发展使其成为开发便携式客观评估青光眼视野缺损方法的理想候选技术。</p><p>在本研究中，我们介绍了 nGoggle（nGoggle Inc.）的开发和初步验证。使用多焦 SSVEPs（mfSSVEPs客观评估视野缺损。该便携式平台集成了一个可穿戴的无线干式脑电图（EEG）系统和头戴式显示器。可监测与视野刺激相关的脑电活动。我们研究了 nGoggle 测量的能力区分青光眼和健康眼的能力及其重复性。</p><h2 id="方法">方法</h2><p><img src="image-20230718181710886.png" alt="image-20230718181710886"></p><p>该设备使用电极$Pz,PO4,PO3,O1,Oz,O2$</p><p>视觉刺激包括两种模式，35°中央视野范围内的20个子区域，闪烁频率为8-11.8Hz,间隔0.2Hz. 两种刺激模式交替呈现以提高SNR.</p><p><img src="image-20230719094359793.png" alt="刺激模式"></p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>刺激时长</td><td>5s</td></tr><tr><td>休息</td><td>1s</td></tr><tr><td>试次数</td><td>30</td></tr><tr><td>刺激频率</td><td>8-11.8</td></tr><tr><td>带通滤波</td><td>6-25Hz</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><p><img src="image-20230719095915028.png" alt="结果"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
