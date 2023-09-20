@@ -8,7 +8,7 @@
       <link href="/2023/09/20/hexo%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/"/>
       <url>/2023/09/20/hexo%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</url>
       
-        <content type="html"><![CDATA[<h1>1. fatal 443</h1><p><img src="image-20230920111917620.png" alt="image-20230920111917620"></p><p>将deploy时，无法连接github</p>]]></content>
+        <content type="html"><![CDATA[<h1>1. fatal 443</h1><p><img src="image-20230920111917620.png" alt="image-20230920111917620"></p><p>将deploy时，无法连接github</p><p>解决方法：修改配置文件_config.yml</p><pre><code class="language-yml"># Deployment## Docs: https://hexo.io/docs/one-command-deploymentdeploy:  type: 'git'  # repo: 'https://github.com/1iuke/1iuke.github.io.git' //old  repository: git@github.com:1iuke/1iuke.github.io.git //new  branch: master</code></pre>]]></content>
       
       
       
