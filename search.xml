@@ -321,6 +321,25 @@
     
     
     <entry>
+      <title>青光眼检测</title>
+      <link href="/2023/07/18/%E8%AE%BA%E6%96%87/%E9%9D%92%E5%85%89%E7%9C%BC%E6%A3%80%E6%B5%8B/"/>
+      <url>/2023/07/18/%E8%AE%BA%E6%96%87/%E9%9D%92%E5%85%89%E7%9C%BC%E6%A3%80%E6%B5%8B/</url>
+      
+        <content type="html"><![CDATA[<p><strong>参考文献</strong></p><p>[1] M. Nakanishi等, 《Detecting Glaucoma With a Portable Brain-Computer Interface for Objective Assessment of Visual Function Loss》, <em>JAMA Ophthalmol</em>, 卷 135, 期 6, 页 550, 6月 2017, doi: <a href="https://doi.org/10.1001/jamaophthalmol.2017.0738">10.1001/jamaophthalmol.2017.0738</a>.</p><h2 id="引言">引言</h2><p><strong>目的</strong>：对青光眼等疾病的视野缺损评估，使用便携式脑机接口（BCI）的开发和初步验证。</p><p>Glaucoma was diagnosed based on a masked grading of optic disc stereophotographs.</p><pre><code>青光眼的诊断依据通常包括以下方面：1. 视力检查：医生会测试患者的视力，包括远视力和近视力。2. 压力测量：通过进行眼压检查（眼压计或非接触式眼压计），医生可以测量眼压是否升高。高眼压是青光眼的常见特征。3. 验光检查：医生使用验光表评估患者的眼睛，并检查任何可能的近视或远视问题。4. 视野检查：通过进行视野测试，医生可以评估患者的视野范围是否受到青光眼的影响。青光眼会逐渐损害视野边缘，使其缩小。5. 青光眼病史：医生会询问患者有关家族青光眼史、个人健康状况和任何可能的症状。6. 眼底检查：通过检查眼底，医生可以评估视神经盘和视网膜的健康状况。青光眼通常伴随着视盘损害和视网膜血管变化。</code></pre><p><code> </code></p><p>使用BCI设备和标准自动验光仪（SAP）同时检测，结果无统计学差异；</p><table><thead><tr><th></th><th>SAP的缺点</th><th>BCI缺点（mfVEP）</th></tr></thead><tbody><tr><td>1</td><td>病人主观差异</td><td>导电膏（耗时与不舒适）</td></tr><tr><td>2</td><td>不便携</td><td>不便携</td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p>然而， SSVEP 技术（无线，干电极）的发展使其成为开发便携式客观评估青光眼视野缺损方法的理想候选技术。</p><p>在本研究中，我们介绍了 nGoggle（nGoggle Inc.）的开发和初步验证。使用多焦 SSVEPs（mfSSVEPs客观评估视野缺损。该便携式平台集成了一个可穿戴的无线干式脑电图（EEG）系统和头戴式显示器。可监测与视野刺激相关的脑电活动。我们研究了 nGoggle 测量的能力区分青光眼和健康眼的能力及其重复性。</p><h2 id="方法">方法</h2><p><img src="image-20230718181710886.png" alt="image-20230718181710886"></p><p>该设备使用电极$Pz,PO4,PO3,O1,Oz,O2$</p><p>视觉刺激包括两种模式，35°中央视野范围内的20个子区域，闪烁频率为8-11.8Hz,间隔0.2Hz. 两种刺激模式交替呈现以提高SNR.</p><p><img src="image-20230719094359793.png" alt="刺激模式"></p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>刺激时长</td><td>5s</td></tr><tr><td>休息</td><td>1s</td></tr><tr><td>试次数</td><td>30</td></tr><tr><td>刺激频率</td><td>8-11.8</td></tr><tr><td>带通滤波</td><td>6-25Hz</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><p><img src="image-20230719095915028.png" alt="结果"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>利用闪烁视频刺激诱发的ssVEPs 研究情境威胁下的持续注意力</title>
       <link href="/2023/07/18/%E8%AE%BA%E6%96%87/%E5%88%A9%E7%94%A8%E9%97%AA%E7%83%81%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E8%AF%B1%E5%8F%91%E7%9A%84ssVEPs%20%E7%A0%94%E7%A9%B6%E6%83%85%E5%A2%83%E5%A8%81%E8%83%81%E4%B8%8B%E7%9A%84%E6%8C%81%E7%BB%AD%E6%B3%A8%E6%84%8F%E5%8A%9B/"/>
       <url>/2023/07/18/%E8%AE%BA%E6%96%87/%E5%88%A9%E7%94%A8%E9%97%AA%E7%83%81%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80%E8%AF%B1%E5%8F%91%E7%9A%84ssVEPs%20%E7%A0%94%E7%A9%B6%E6%83%85%E5%A2%83%E5%A8%81%E8%83%81%E4%B8%8B%E7%9A%84%E6%8C%81%E7%BB%AD%E6%B3%A8%E6%84%8F%E5%8A%9B/</url>
@@ -340,25 +359,6 @@
             <tag> video, SSVEP </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>青光眼检测</title>
-      <link href="/2023/07/18/%E8%AE%BA%E6%96%87/%E9%9D%92%E5%85%89%E7%9C%BC%E6%A3%80%E6%B5%8B/"/>
-      <url>/2023/07/18/%E8%AE%BA%E6%96%87/%E9%9D%92%E5%85%89%E7%9C%BC%E6%A3%80%E6%B5%8B/</url>
-      
-        <content type="html"><![CDATA[<p><strong>参考文献</strong></p><p>[1] M. Nakanishi等, 《Detecting Glaucoma With a Portable Brain-Computer Interface for Objective Assessment of Visual Function Loss》, <em>JAMA Ophthalmol</em>, 卷 135, 期 6, 页 550, 6月 2017, doi: <a href="https://doi.org/10.1001/jamaophthalmol.2017.0738">10.1001/jamaophthalmol.2017.0738</a>.</p><h2 id="引言">引言</h2><p><strong>目的</strong>：对青光眼等疾病的视野缺损评估，使用便携式脑机接口（BCI）的开发和初步验证。</p><p>Glaucoma was diagnosed based on a masked grading of optic disc stereophotographs.</p><pre><code>青光眼的诊断依据通常包括以下方面：1. 视力检查：医生会测试患者的视力，包括远视力和近视力。2. 压力测量：通过进行眼压检查（眼压计或非接触式眼压计），医生可以测量眼压是否升高。高眼压是青光眼的常见特征。3. 验光检查：医生使用验光表评估患者的眼睛，并检查任何可能的近视或远视问题。4. 视野检查：通过进行视野测试，医生可以评估患者的视野范围是否受到青光眼的影响。青光眼会逐渐损害视野边缘，使其缩小。5. 青光眼病史：医生会询问患者有关家族青光眼史、个人健康状况和任何可能的症状。6. 眼底检查：通过检查眼底，医生可以评估视神经盘和视网膜的健康状况。青光眼通常伴随着视盘损害和视网膜血管变化。</code></pre><p><code> </code></p><p>使用BCI设备和标准自动验光仪（SAP）同时检测，结果无统计学差异；</p><table><thead><tr><th></th><th>SAP的缺点</th><th>BCI缺点（mfVEP）</th></tr></thead><tbody><tr><td>1</td><td>病人主观差异</td><td>导电膏（耗时与不舒适）</td></tr><tr><td>2</td><td>不便携</td><td>不便携</td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p>然而， SSVEP 技术（无线，干电极）的发展使其成为开发便携式客观评估青光眼视野缺损方法的理想候选技术。</p><p>在本研究中，我们介绍了 nGoggle（nGoggle Inc.）的开发和初步验证。使用多焦 SSVEPs（mfSSVEPs客观评估视野缺损。该便携式平台集成了一个可穿戴的无线干式脑电图（EEG）系统和头戴式显示器。可监测与视野刺激相关的脑电活动。我们研究了 nGoggle 测量的能力区分青光眼和健康眼的能力及其重复性。</p><h2 id="方法">方法</h2><p><img src="image-20230718181710886.png" alt="image-20230718181710886"></p><p>该设备使用电极$Pz,PO4,PO3,O1,Oz,O2$</p><p>视觉刺激包括两种模式，35°中央视野范围内的20个子区域，闪烁频率为8-11.8Hz,间隔0.2Hz. 两种刺激模式交替呈现以提高SNR.</p><p><img src="image-20230719094359793.png" alt="刺激模式"></p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>刺激时长</td><td>5s</td></tr><tr><td>休息</td><td>1s</td></tr><tr><td>试次数</td><td>30</td></tr><tr><td>刺激频率</td><td>8-11.8</td></tr><tr><td>带通滤波</td><td>6-25Hz</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><p><img src="image-20230719095915028.png" alt="结果"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 论文 </category>
-          
-      </categories>
-      
       
     </entry>
     
