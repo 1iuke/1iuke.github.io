@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>与天大合作做视频刺激+想象运动的对比研究</title>
-      <link href="/2023/10/07/%E9%A1%B9%E7%9B%AE/%E4%B8%8E%E5%A4%A9%E5%A4%A7%E5%90%88%E4%BD%9C%E5%81%9A%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80-%E6%83%B3%E8%B1%A1%E8%BF%90%E5%8A%A8%E7%9A%84%E5%AF%B9%E6%AF%94%E7%A0%94%E7%A9%B6/"/>
-      <url>/2023/10/07/%E9%A1%B9%E7%9B%AE/%E4%B8%8E%E5%A4%A9%E5%A4%A7%E5%90%88%E4%BD%9C%E5%81%9A%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80-%E6%83%B3%E8%B1%A1%E8%BF%90%E5%8A%A8%E7%9A%84%E5%AF%B9%E6%AF%94%E7%A0%94%E7%A9%B6/</url>
-      
-        <content type="html"><![CDATA[<h2 id="1-起因">1.起因</h2><p><img src="../%E4%B8%8E%E5%A4%A9%E5%A4%A7%E5%90%88%E4%BD%9C%E5%81%9A%E8%A7%86%E9%A2%91%E5%88%BA%E6%BF%80-%E6%83%B3%E8%B1%A1%E8%BF%90%E5%8A%A8%E7%9A%84%E5%AF%B9%E6%AF%94%E7%A0%94%E7%A9%B6/image-20231007123812164.png" alt="image-20231007123812164"></p><h2 id="2-参数确定实验">2.参数确定实验</h2><h3 id="2-1-起因">2.1 起因</h3><p>运动想象用的mu和beta节律和二次谐波会有些重叠，但区域不重叠，应该影响不大</p><p>Yijun:<br>参数确定需要有可解释性，论文审稿的时候肯定会被问到<br>针对握拳视频需要做一个扫频，包括动作本身的频率的影响，是否有交叉调制等</p><h3 id="2-2实验设计：">2.2实验设计：</h3><p>​刺激频率3-12Hz,共10个</p><p>​5s刺激+2s提示和休息，采10组。</p><p>​考虑动作本身频率 加上0.5, 1, 2三种动作频率</p><p>​加上主管问卷评分。采10个人的数据</p><p>​数据时长 $(5+2)\times 10 \times 10 \times 3$ 共计35分钟</p><h3 id="2-3-数据分析">2.3 数据分析</h3><p>频谱</p><p>10分类准确率</p><p>2分类准确率（相邻频率）</p><h2 id="3-初步实验">3.初步实验</h2><p>实验分为三部分</p><ol><li>握拳观察</li><li>握拳想象（静态的图片）</li><li>握拳观察+想象</li></ol><p>计划是 2s提示+4s刺激+3~4s休息，每个轮次 30个试次，6个轮次，每个轮次5分钟，共计30分钟</p><p>刺激频率5hz和6hz1</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>基于稳态视觉诱发电位触发脑机界面功能电刺激的闪烁动作视频的康复动作观察游戏开发</title>
       <link href="/2023/10/07/%E8%AE%BA%E6%96%87/%E5%9F%BA%E4%BA%8E%E7%A8%B3%E6%80%81%E8%A7%86%E8%A7%89%E8%AF%B1%E5%8F%91%E7%94%B5%E4%BD%8D%E8%A7%A6%E5%8F%91%E8%84%91%E6%9C%BA%E7%95%8C%E9%9D%A2%E5%8A%9F%E8%83%BD%E7%94%B5%E5%88%BA%E6%BF%80%E7%9A%84%E9%97%AA%E7%83%81%E5%8A%A8%E4%BD%9C%E8%A7%86%E9%A2%91%E7%9A%84%E5%BA%B7%E5%A4%8D%E5%8A%A8%E4%BD%9C%E8%A7%82%E5%AF%9F%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"/>
       <url>/2023/10/07/%E8%AE%BA%E6%96%87/%E5%9F%BA%E4%BA%8E%E7%A8%B3%E6%80%81%E8%A7%86%E8%A7%89%E8%AF%B1%E5%8F%91%E7%94%B5%E4%BD%8D%E8%A7%A6%E5%8F%91%E8%84%91%E6%9C%BA%E7%95%8C%E9%9D%A2%E5%8A%9F%E8%83%BD%E7%94%B5%E5%88%BA%E6%BF%80%E7%9A%84%E9%97%AA%E7%83%81%E5%8A%A8%E4%BD%9C%E8%A7%86%E9%A2%91%E7%9A%84%E5%BA%B7%E5%A4%8D%E5%8A%A8%E4%BD%9C%E8%A7%82%E5%AF%9F%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/</url>
@@ -183,31 +170,6 @@
         <content type="html"><![CDATA[<h2 id="将Unity项目上传到GitLab涉及一些步骤。下面是一个简单的指南：">将Unity项目上传到GitLab涉及一些步骤。下面是一个简单的指南：</h2><ol><li><p><strong>在GitLab上创建一个项目</strong>：首先，确保你已经在GitLab上创建了一个项目。登录到GitLab，点击&quot;New Project&quot;（新项目），然后按照提示创建一个新项目。选择项目的名称、描述和其他设置。</p></li><li><p><strong>设置Git仓库</strong>：在GitLab项目页面的右上角，你会找到Git仓库的URL。复制这个URL，你将在后续步骤中用到。</p></li><li><p><strong>在Unity中初始化Git仓库</strong>：在Unity中打开你的项目。如果你的项目还没有与Git关联，你需要在项目文件夹中打开终端并运行以下命令来初始化Git仓库：</p><pre><code class="language-bash">git init</code></pre></li><li><p><strong>添加项目文件</strong>：将你的Unity项目文件添加到Git仓库。你可以使用以下命令将所有文件添加到仓库：</p><pre><code class="language-bash">git add .</code></pre><p>或者，你可以使用<code>.gitignore</code>文件来排除不需要跟踪的文件，以减小仓库的大小。</p></li><li><p><strong>提交更改</strong>：一旦你添加了文件，使用以下命令提交更改：</p><pre><code class="language-bash">git commit -m &quot;Initial commit&quot;</code></pre></li><li><p><strong>关联GitLab远程仓库</strong>：将Git仓库关联到GitLab远程仓库，替换<code>&lt;GitLab仓库URL&gt;</code>为你在第2步中复制的URL。</p><pre><code class="language-bash">git remote add origin &lt;GitLab仓库URL&gt;</code></pre></li><li><p><strong>推送到GitLab</strong>：最后，将你的本地仓库推送到GitLab上。你可能需要提供GitLab账户的凭据。</p><pre><code class="language-bash">git push -u origin master</code></pre></li><li><p><strong>完成</strong>：一旦推送完成，你的Unity项目就会上传到GitLab仓库中。</p></li></ol><p>请注意，这只是一个基本的指南，具体的步骤可能会因你的项目和工作流程而有所不同。确保在上传项目之前备份好项目文件，并在GitLab上设置适当的访问权限和保护措施，以确保项目的安全性和可维护性。</p><h2 id="已有的项目如何拉取">已有的项目如何拉取</h2><h3 id="拉取项目">拉取项目</h3><pre><code class="language-bash">git clone http://192.168.1.164:8090/liuke/video_experiment.git</code></pre><h3 id="提交项目">提交项目</h3><ol><li>查看分支</li></ol><p><img src="image-20230920123054168.png" alt=""></p><ol start="2"><li>创建分支</li></ol><p><img src="image-20230920123137365.png" alt="image-20230920123137365"></p><ol start="3"><li>添加文件</li></ol><p><img src="image-20230920123210709.png" alt="image-20230920123210709"></p><ol start="4"><li>提交更改</li></ol><p><img src="image-20230920123235109.png" alt="image-20230920123235109"></p><ol start="5"><li>push</li></ol><p><img src="image-20230920123253469.png" alt="image-20230920123253469"></p><h2 id="拉取更改">拉取更改</h2><pre><code>git pull origin main</code></pre><p><img src="image-20230920130934543.png" alt="image-20230920130934543"></p>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>第十周</title>
-      <link href="/2023/09/04/%E5%91%A8%E6%8A%A5/20230903/"/>
-      <url>/2023/09/04/%E5%91%A8%E6%8A%A5/20230903/</url>
-      
-        <content type="html"><![CDATA[<h2 id="本周计划">本周计划</h2><p>优化单指动画</p><p>方向：</p><pre><code>1. 频率 1. 窄带间隔0.2Hz(分析帧间隔) 2. 降频+相位2. 背景 1. 3. </code></pre><h3 id="优化一、窄带0-2Hz频率间隔">优化一、窄带0.2Hz频率间隔</h3><div style="display: flex;">    <div style="flex: 50%; padding: 5px;">        <img src="0.2Hz间隔.png" alt="0.2Hz间隔" style="width: 100%;">        <p style="text-align: center;">Image 1</p>    </div>    <div style="flex: 50%; padding: 5px;">        <img src="0.2Hz间隔-1693796188271-2.png" alt="0.2Hz间隔-1693796188271-2" style="width: 100%;">        <p style="text-align: center;">Image 2</p>    </div></div><p>首先，由于编码本身限制，在刺激开始的0.1s左右，刺激内容是一致的，因此无法诱发出有效的响应。</p><p>解决方案</p><ol><li>添加相位约束</li><li>刺激图像本身的空间/相位分布不同，可能不需要加</li></ol><h3 id="优化二、画面">优化二、画面</h3><p>运动</p><p>​横向，纵向，旋转</p><h3 id="实验设计">实验设计</h3><p>频率3：0.2：9</p><p><img src="frame_1.jpg" alt="frame_1"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工作周报 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 工作周报 </tag>
-            
-        </tags>
       
     </entry>
     
